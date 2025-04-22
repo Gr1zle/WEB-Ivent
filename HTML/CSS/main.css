@@ -1,0 +1,109 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.sort-filter {
+  display: flex;
+  gap: 15px;
+}
+
+select, button {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.event-card[data-category="work"] {
+  background-color: #f0f4fc;
+}
+.event-card[data-category="personal"] {
+  background-color: #edf8f0;
+}
+.event-card[data-category="family"] {
+  background-color: #faedf1;
+}
+.event-card[data-category="other"] {
+  background-color: #f7f0e7;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card .event-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #333333;
+}
+
+.event-card .event-date {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 8px 0;
+}
+
+.event-card .event-description {
+  font-size: 14px;
+  color: #555555;
+  margin: 8px 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-card .event-category {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  margin-top: 8px;
+}
+
+.event-card .event-category.work {
+  background-color: #4a6baf;
+}
+.event-card .event-category.personal {
+  background-color: #6aaf4a;
+}
+.event-card .event-category.family {
+  background-color: #af4a6a;
+}
+.event-card .event-category.other {
+  background-color: #af8a4a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.event-card {
+  animation: fadeIn 0.3s ease forwards;
+}

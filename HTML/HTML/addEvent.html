@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавление событий</title>
+  <link rel="stylesheet" href="/CSS/event.css">
+  <link rel="stylesheet" href="/CSS/gen.css">
+</head>
+<body>
+  <header>
+    <h1>Добавление нового события</h1>
+    <a href="main.html" class="add-main">Вернуться на главную страницу</a>
+  </header>
+
+  <main>
+    <form id="event-form">
+      <div class="form-group">
+        <label for="event-title">Введите название события</label>
+        <input type="text" id="event-title" maxlength="50" required>
+      </div>
+
+      <div class="form-group">
+        <label for="event-category">Выберите категорию события</label>
+        <select id="event-category" required>
+          <option value="" disabled selected>Выберите категорию</option>
+          <option value="work">Работа</option>
+          <option value="personal">Личное</option>
+          <option value="family">Семья</option>
+          <option value="other">Другое</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="event-date">Выберите дату события</label>
+        <input type="date" id="event-date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="event-description">Введите описание события</label>
+        <textarea id="event-description" maxlength="500"></textarea>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn btn-save">Сохранить событие</button>
+      </div>
+    </form>
+  </main>
+  <script src="/JS/events.js"></script>
+</body>
+</html>

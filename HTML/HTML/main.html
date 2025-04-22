@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Планировщик событий</title>
+  <link rel="stylesheet" href="/CSS/main.css">
+  <link rel="stylesheet" href="/CSS/gen.css">
+</head>
+<body>
+  <header>
+    <h1>Планировщик моих событий</h1>
+    <a href="addEvent.html" class="add-main">+ Добавить новое событие </a>
+  </header>  
+      <main>
+        <div class="controls">
+
+          <div class="sort-filter">
+            <select id="sort-by">
+              <option value="date-asc">Сортировать по дате (сначала старые)</option>
+              <option value="date-desc">Сортировать по дате (сначала новые)</option>
+              <option value="title-asc">Сортировать по названию (А-Я)</option>
+              <option value="title-desc">Сортировать по названию (Я-А)</option>
+            </select>          
+            <select id="filter-by">
+              <option value="all">Все категории</option>
+              <option value="work">Работа</option>
+              <option value="personal">Личное</option>
+              <option value="family">Семья</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="events-grid" id="events-grid">
+          <div class="no-events">Нет событий. Добавьте первое событие!</div>
+          <template id="event-card-template">
+            <div class="event-card" data-id="" data-category="">
+              <h3 class="event-title"></h3>
+              <p class="event-date"></p>
+              <p class="event-description"></p>
+              <span class="event-category"></span>
+            </div>
+          </template>
+  </main>
+  <script src="/JS/main.js"></script>
+</body>
+</html>
